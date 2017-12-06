@@ -20,8 +20,11 @@ public class EmployeeMapper implements ResultSetMapper<Employee> {
    */
   public final Employee map(final int idx, final ResultSet rs, final      StatementContext ctx) throws SQLException {
     /**
-     * @return Employee
+     * @return Employee.
      */
-    return new Employee(rs.getInt("EMP_ID"));
+    return new Employee(rs.getInt("EMP_ID"), rs.getString("EMP_NAME"),
+                        rs.getLong("EMP_PHONE"), rs.getString("EMP_EMAIL"),
+                        rs.getString("EMP_DEPT"), rs.getString("EMP_JOINING_DATE"),
+                        rs.getInt("EMP_MGR_ID"), rs.getInt("EMP_LEAVE_BAL"));
   }
 }

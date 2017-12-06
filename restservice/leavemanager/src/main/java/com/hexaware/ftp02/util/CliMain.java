@@ -43,13 +43,18 @@ public class CliMain {
     if (employee == null) {
       System.out.println("Sorry, No such employee");
     } else {
-      System.out.println(employee.getEmpId());
+      System.out.println(employee.getEmpId() + " " + employee.getEmpName()
+                        + " " + employee.getEmpPhone() + " " + employee.getEmpEmail()
+                        + " " + employee.getEmpDept() + " " + employee.getEmpJoinDate()
+                        + " " + employee.getEmpMgrId() + " " + employee.getEmpLeaveBal());
     }
   }
   private void listEmployeesDetails() {
     Employee[] employee = Employee.listAll();
     for (Employee e : employee) {
-      System.out.println(e.getEmpId());
+      System.out.println(e.getEmpId() + " " + e.getEmpName() + " " + e.getEmpPhone()
+                         + " " + e.getEmpEmail() + " " + e.getEmpDept() + " " + e.getEmpJoinDate()
+                         + " " + e.getEmpMgrId() + " " + e.getEmpLeaveBal());
     }
   }
   /**
